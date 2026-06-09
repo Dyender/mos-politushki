@@ -1,0 +1,18 @@
+﻿services:
+  db:
+    image: postgres:18
+    container_name: politushka-container
+
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+
+    volumes:
+      - postgres_data_volume:/var/lib/postgresql
+
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data_volume:
