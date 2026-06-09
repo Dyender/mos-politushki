@@ -8,6 +8,10 @@ body {
   font-weight: 600;
 }
 
+p {
+  font-family: "Space Grotesk", sans-serif;
+}
+
 h1 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 600;
@@ -15,7 +19,7 @@ h1 {
 }
 
 .app {
-  background-color: #2a1a22;
+  background: linear-gradient(135deg, #1a1015, #3f2130);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,42 +27,23 @@ h1 {
   margin: 14px;
   border-radius: 8px;
   box-shadow: 0 0 4px #2a1a22;
+ 
 }
 
 .mainBlock {
-  width:300px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
 
-button {
-  border: 1px solid black;
-  box-shadow: 0 0 6px black;
-  background-color: #e6b0c4;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  width: 60px;
-  height: 60px;
-  font-size: 30px;
-}
-
-button:hover {
-  background-color: #e69ab6;
-  transform: rotate(4deg) translateY(-5px) scale(105%);
-}
-
-button:active {
-  transform: scale(80%);
-}
-
 .mainButton {
+  background-color: #e6b0c4;
   width: auto;
   height: auto;
   border: 0px solid black;
-  box-shadow: 0 0 0px black;
-  border-radius: 14px;
+  transition: all 0.3s ease;
 }
 
 .mainButton:hover {
@@ -74,6 +59,7 @@ hr {
   border: 1px solid rgba(0, 0, 0, 0.363);
   width: 100%;
 }
+
 
 .buttonBlock {
   margin-top: 50px;
@@ -91,7 +77,9 @@ hr {
   align-items: center;
   justify-content: center;
   background-color: #e6b0c4;
-  width: 500px;
+  max-width: 500px;
+  min-width: 300px;
+  width: 60%;
   height: 600px;
   border-radius: 16px;
   box-shadow: 0 0 20px #e6b0c4;
@@ -102,17 +90,26 @@ hr {
 
 .counter:hover {
   border: 2px solid #e6b0c4;
+  transform: scale(105%);
 }
 
 .upgradeBlock {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
-  padding-left: 30px;
+  opacity: 100;
+  transition: all 0.3s ease;
 }
 
-.upgrade {
+.upgradeBlock.hidden {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+
+.buttonUpgrade {
   background-color: #e6b0c4;
   border-radius: 16px;
   box-shadow: 0 0 20px #e6b0c4;
@@ -132,6 +129,56 @@ hr {
   border-radius: 14px;
 }
 
-.upgrade:hover {
-    transform: scale(105%);
+.buttonUpgrade:hover {
+  background-color: #e69ab6;
+  transform: translateX(15px) scale(105%);
+}
+
+.buttonUpgrade:active {
+  transform: scale(80%);
+}
+
+.small-button {
+  background-color: #e6b0c4;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  border: 1px solid white;
+}
+
+.small-button:hover {
+  background-color: #e69ab6;
+  transform: rotate(4deg) translateY(-5px) scale(105%);
+}
+
+.small-button:active {
+  transform: scale(80%);
+}
+
+.lvlButton {
+  background-color: #e6b0c4;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  min-width: 300px;
+  max-width: 500px;
+  width: 60%;
+  height: auto;
+  font-size: 30px;
+  border: 1px solid white;
+}
+
+.lvlButton:hover {
+  background-color: #e69ab6;
+  transform: translateY(-5px) scale(105%);
+}
+
+.lvlButton:active {
+  transform: scale(80%);
+}
+
+.cost {
+  font-size: 25px;
+  font-weight: 800;
 }
